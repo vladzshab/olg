@@ -1,7 +1,5 @@
-﻿#include <iostream>
-#include <cmath>
-
-using namespace std;
+﻿#include <cstdlib>
+#include <iostream>
 int main()
 {
     int i; float a[10], b[10], c[10];
@@ -9,7 +7,7 @@ int main()
     sa = 0;
     sb = 0;
     sc = 0;
-    cout << "pervaja posledovatelnost" << endl;
+    std::cout << "pervaja posledovatelnost" << std::endl;
     for (i = 0; i < 10; i++)
     {
         a[i] = rand() % 10;
@@ -22,7 +20,7 @@ int main()
     cout << "vtoraja posledovatelnost" << endl;
     for (i = 0; i < 10; i++)
     {
-        b[i] = rand() % 10;
+        b[i] = std::rand() % 10;
         cout << b[i];
         cout << ' ';
         sb = sb + b[i];
