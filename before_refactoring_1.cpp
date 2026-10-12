@@ -4,37 +4,30 @@
 static const int ARRAY_SIZE = 10;
 static const int RANDOM_LIMIT = 10;
 
-int main()
-{
-    float first_array[ARRAY_SIZE], second_array[ARRAY_SIZE], third_array[ARRAY_SIZE];
-float first_sum, second_sum, third_sum;
-    std::cout << "pervaja posledovatelnost" << std::endl;
-    for (int i = 0; i < ARRAY_SIZE; ++i)
-    {
-		first_array[i] = std::rand() % RANDOM_LIMIT;
-		std::cout << first_array[i] << ' ';
-		first_sum += first_array[i]; 
-    }
-    cout << ' ' << endl;
-    cout << "srednee pervoy posledovatelnocty =" << sa / 10 << endl;
-    cout << "vtoraja posledovatelnost" << endl;
-    for (int i = 0; i < ARRAY_SIZE; ++i)
-    {
-        second_array[i] = std::rand() % RANDOM_LIMIT;
-		std::cout << second_array[i] << ' ';
-		first_sum += second_array[i];
-    }
-    cout << ' ' << endl;
-    cout << "srednee vtoroy posledovatelnocty =" << sb / 10 << endl;
-    cout << "tretja posledovatelnost" << endl;
-    for (int i = 0; i < ARRAY_SIZE; ++i)
-    {
-        third_array[i] = std::rand() % RANDOM_LIMIT;
-		std::cout << third_array[i] << ' ';
-		first_sum += third_array[i];
-    }
-    cout << ' ' << endl;
-    cout << "srednee tretjey posledovatelnocty =" << sc / 10 << endl;
+void print_array_average(float numbers[], const char* title)
 
+
+int main() 
+{
+	int first_array[ARRAY_SIZE];
+    int second_array[ARRAY_SIZE];
+    int third_array[ARRAY_SIZE];
+
+    print_array_average(first_array, "Первая");
+    print_array_average(second_array, "Вторая");
+    print_array_average(third_array, "Третья");
     return 0;
 }
+
+void print_array_average(float numbers[], const char* title){
+    float sum = 0;
+    std::cout << title << " последовательность:\n";
+    for (int i = 0; i < ARRAY_SIZE; ++i) {
+        numbers[i] = std::rand() % RANDOM_LIMIT;
+        std::cout << numbers[i] << ' ';
+        sum += numbers[i];
+    }
+
+	const float average = sum / ARRAY_SIZE;
+	std::cout << "\nСреднее арифметическое: " << average << "\n\n"
+}			  
