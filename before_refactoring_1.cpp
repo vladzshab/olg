@@ -28,6 +28,6 @@ void print_array_average(float numbers[], const char* title){
         sum += numbers[i];
     }
 
-	const float average = sum / ARRAY_SIZE;
-	std::cout << "\nСреднее арифметическое: " << average << "\n\n"
+	const float average = static_cast<float>(sum) / ARRAY_SIZE;
+	std::cout << "\nСреднее арифметическое: "<< average << "\n\n"
 }			  
