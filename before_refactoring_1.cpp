@@ -4,7 +4,7 @@
 static const int ARRAY_SIZE = 10;
 static const int RANDOM_LIMIT = 10;
 
-void print_array_average(float numbers[], const char* title)
+void print_array_average(float numbers[], const char* title);
 
 
 int main() 
@@ -19,7 +19,7 @@ int main()
     return 0;
 }
 
-void print_array_average(float numbers[], const char* title){
+void print_array_average(int numbers[], const char* title){
     float sum = 0;
     std::cout << title << " последовательность:\n";
     for (int i = 0; i < ARRAY_SIZE; ++i) {
@@ -29,5 +29,5 @@ void print_array_average(float numbers[], const char* title){
     }
 
 	const float average = static_cast<float>(sum) / ARRAY_SIZE;
-	std::cout << "\nСреднее арифметическое: "<< average << "\n\n"
+	std::cout << "\nСреднее арифметическое: "<< average << "\n\n";
 }			  
