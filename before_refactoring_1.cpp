@@ -1,14 +1,15 @@
 ﻿#include <cstdlib>
 #include <iostream>
+
+static const int ARRAY_SIZE = 10;
+static const int RANDOM_LIMIT = 10;
+
 int main()
 {
-    int i; float a[10], b[10], c[10];
-    float sa, sb, sc;
-    sa = 0;
-    sb = 0;
-    sc = 0;
+    float first_array[ARRAY_SIZE], second_array[ARRAY_SIZE], third_array[ARRAY_SIZE];
+float first_sum, second_sum, third_sum;
     std::cout << "pervaja posledovatelnost" << std::endl;
-    for (i = 0; i < 10; i++)
+    for (int i = 0; i < ARRAY_SIZE; ++i)
     {
         a[i] = rand() % 10;
         cout << a[i];
@@ -18,7 +19,7 @@ int main()
     cout << ' ' << endl;
     cout << "srednee pervoy posledovatelnocty =" << sa / 10 << endl;
     cout << "vtoraja posledovatelnost" << endl;
-    for (i = 0; i < 10; i++)
+    for (int i = 0; i < ARRAY_SIZE; ++i)
     {
         b[i] = std::rand() % 10;
         cout << b[i];
@@ -28,7 +29,7 @@ int main()
     cout << ' ' << endl;
     cout << "srednee vtoroy posledovatelnocty =" << sb / 10 << endl;
     cout << "tretja posledovatelnost" << endl;
-    for (i = 0; i < 10; i++)
+    for (int i = 0; i < ARRAY_SIZE; ++i)
     {
         c[i] = rand() % 10;
         cout << c[i];
